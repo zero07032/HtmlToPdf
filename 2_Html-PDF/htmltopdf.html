@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>html to pdf</title>
+  <script src="js/jquery.min.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="card_cotainer" id="card_cotainerid">
+
+
+    <div class="container">
+      <div class="card" style="width: 18rem;">
+        <img
+          src="data:image/jpeg;base64,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"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+  <button class="btn btn-primary" id="download_btn">Download PDF</button>
+
+
+
+  <script src="js/jspdf.debug.js"></script>
+  <script src="js/html2canvas.min.js"></script>
+  <script src="js/html2pdf.min.js"></script>
+
+
+  <script>
+    const divc = {
+      margin: 0.5,
+      filename: 'html.pdf',
+      image:{
+        type:'jpeg',
+        quality: 1000
+      },
+      html2canvas:{
+        scale:1
+      },
+      jsPDF:{
+        unit: 'in',
+        format: 'letter',
+        orientation: 'portrait'
+      }
+    }
+
+    $('#download_btn').click(function(e){
+      e.preventDefault();
+
+      const element = document.getElementById("card_cotainerid");
+      html2pdf().from(element).set(divc).save();
+    })
+
+    function printDiv(diveaName){
+      var printContent = document.getElementById(diveaName).innerHTML;
+      var orginalContent = document.body.innerHTML;
+
+      document.body.innerHTML = printContent;
+      window.print()
+      document.body.innerHTML = orginalContent
+    }
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>
